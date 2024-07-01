@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #18171F;
+  font-family: "JetBrains Mono", monospace;
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.main .main__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #817D92;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .main {
+    gap: 1rem;
+  }
+  .main .main__title {
+    font-size: 1rem;
+  }
+}
+
+.password-generator {
+  min-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .password-generator {
+    min-width: unset;
+    width: 343px;
+  }
+}
+.password-generator .password-generator__box,
+.password-generator .password-generator__controls {
+  background-color: #24232C;
+}
+.password-generator .password-generator__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.125rem 2rem;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__box {
+    min-width: unset;
+    padding: 1rem;
+  }
+}
+.password-generator .password-generator__box .password-generator__generated-password {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #E6E5EA;
+}
+.password-generator .password-generator__box .password-generator__generated-password.default {
+  color: rgba(230, 229, 234, 0.25);
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__box .password-generator__generated-password {
+    font-size: 1.5rem;
+  }
+}
+.password-generator .password-generator__box .password-generator__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.password-generator .password-generator__box .password-generator__status .password-generator__status-icon {
+  cursor: pointer;
+  transition: fill 200ms ease-in-out;
+  fill: #A4FFAF;
+}
+.password-generator .password-generator__box .password-generator__status .password-generator__status-icon:hover {
+  fill: #E6E5EA;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__box .password-generator__status .password-generator__status-icon {
+    font-size: 1.5rem;
+  }
+}
+.password-generator .password-generator__box .password-generator__status .password-generator__status-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #A4FFAF;
+  text-transform: uppercase;
+}
+.password-generator .password-generator__box .password-generator__status .password-generator__status-text.hidden {
+  display: none;
+}
+.password-generator .password-generator__controls {
+  padding: 1rem 2rem 2rem;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls {
+    padding: 1rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__character-length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__character-length {
+    margin-bottom: 0.5rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__character-length .password-generator__character-length-label {
+  font-size: 1.125rem;
+  color: #E6E5EA;
+}
+.password-generator .password-generator__controls .password-generator__character-length .password-generator__character-length-number {
+  color: #A4FFAF;
+  font-size: 2rem;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__character-length .password-generator__character-length-number {
+    font-size: 1.5rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__range-input {
+  margin-bottom: 2rem;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  height: 0.5rem;
+  background: #18171F;
+  /* Thumb: webkit */
+  /* Thumb: Firefox */
+  /* Hover Thumb: Webkit */
+  /* Hover Thumb: Firefox */
+}
+.password-generator .password-generator__controls .password-generator__range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 27px;
+  width: 27px;
+  border: 1px solid transparent;
+  background-color: #E6E5EA;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+.password-generator .password-generator__controls .password-generator__range-input::-moz-range-thumb {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  background-color: #E6E5EA;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+.password-generator .password-generator__controls .password-generator__range-input:hover::-webkit-slider-thumb {
+  background-color: #18171F;
+  border: 2px solid #A4FFAF;
+}
+.password-generator .password-generator__controls .password-generator__range-input:hover::-moz-range-thumb {
+  background-color: #18171F;
+  border: 2px solid #A4FFAF;
+}
+.password-generator .password-generator__controls .password-generator__options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.password-generator .password-generator__controls .password-generator__options .password-generator__option {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__options .password-generator__option {
+    gap: 1.25rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__options .password-generator__option .password-generator__label {
+  font-size: 1.125rem;
+  color: #E6E5EA;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__options .password-generator__option .password-generator__label {
+    font-size: 1.125rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__options .password-generator__option .password-generator__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #E6E5EA;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.password-generator .password-generator__controls .password-generator__options .password-generator__option .password-generator__checkbox:checked {
+  background-color: #A4FFAF;
+  border-color: #A4FFAF;
+}
+.password-generator .password-generator__controls .password-generator__options .password-generator__option .password-generator__checkbox:checked::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 10px;
+  background-image: url(../../assets/images/icon-check.svg);
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.password-generator .password-generator__controls .password-generator__strength-status {
+  background-color: #18171F;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__strength-status {
+    padding: 1rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-text,
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-text {
+  font-size: 1.125rem;
+  color: #817D92;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator {
+  font-size: 1.5rem;
+  color: #E6E5EA;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator {
+    font-size: 1.125rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator .password-generator__indicator-boxes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator .password-generator__indicator-boxes .password-generator__indicator-box {
+  width: 10px;
+  height: 28px;
+  border: 2px solid #E6E5EA;
+  transition: all 300ms ease-in-out;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator .password-generator__indicator-boxes .password-generator__indicator-box.fill-too-weak {
+  background-color: #F64A4A;
+  border: 2px solid #F64A4A;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator .password-generator__indicator-boxes .password-generator__indicator-box.fill-weak {
+  background-color: #FB7C58;
+  border: 2px solid #FB7C58;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator .password-generator__indicator-boxes .password-generator__indicator-box.fill-medium {
+  background-color: #F8CD65;
+  border: 2px solid #F8CD65;
+}
+.password-generator .password-generator__controls .password-generator__strength-status .password-generator__strength-status-indicator .password-generator__indicator-boxes .password-generator__indicator-box.fill-strong {
+  background-color: #A4FFAF;
+  border: 2px solid #A4FFAF;
+}
+.password-generator .password-generator__controls .password-generator__generate-btn {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  padding-block: 1.07rem;
+  border: 2px solid transparent;
+  background-color: #A4FFAF;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .password-generator .password-generator__controls .password-generator__generate-btn {
+    margin-top: 1rem;
+    padding-block: 1.125rem;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+}
+.password-generator .password-generator__controls .password-generator__generate-btn .password-generator__generate-icon {
+  fill: #24232C;
+  transition: all 200ms ease-in-out;
+}
+.password-generator .password-generator__controls .password-generator__generate-btn:hover {
+  background-color: transparent;
+  color: #A4FFAF;
+  border: 2px solid #A4FFAF;
+}
+.password-generator .password-generator__controls .password-generator__generate-btn:hover .password-generator__generate-icon {
+  fill: #A4FFAF;
+}
+.password-generator .error-message {
+  position: absolute;
+  left: 0;
+  bottom: -4rem;
+  text-align: center;
+  color: #F64A4A;
+  transition: opacity 200ms ease-in-out;
+}
+.password-generator .error-message.hidden {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

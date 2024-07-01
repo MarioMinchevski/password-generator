@@ -1,0 +1,14 @@
+export const generatedPassword = document.querySelector('.password-generator__generated-password');
+export const copyIcon = document.querySelector('.password-generator__status-icon');
+export const generatedPasswordStatusText = document.querySelector('.password-generator__status-text');
+export const passwordLenghthText = document.querySelector('.password-generator__character-length-number');
+export const rangeInput = document.querySelector('.password-generator__range-input');
+export const hasUpperCheckbox = document.querySelector('.password-generator__option #uppercase');
+export const hasLowerCheckbox = document.querySelector('.password-generator__option #lowercase');
+export const hasNumberCheckbox = document.querySelector('.password-generator__option #numbers');
+export const hasSymbolCheckbox = document.querySelector('.password-generator__option #symbols');
+export const passwordGeneratorStrengthLevel = document.querySelector('.password-generator__strength-level');
+export const passwordStrengthLevelIndicators = document.querySelectorAll('.password-generator__indicator-box');
+export const indicatorsArray = Array.from(passwordStrengthLevelIndicators);
+export const generatePassBtn = document.querySelector('.password-generator__generate-btn');
+export const errorMessage = document.querySelector('.error-message');

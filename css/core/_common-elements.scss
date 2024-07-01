@@ -1,0 +1,36 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    background-color: $color-neutral-quaternary;
+    font-family: $font-family-base;
+    display: grid;
+    place-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    .main__title {
+        font-size: $font-size-heading-medium;
+        font-weight: $font-weight-bold;
+        color: $color-neutral-secondary;
+        text-align: center;
+    }
+
+    @include mobile-styles {
+        gap: 1rem;
+
+        .main__title {
+            font-size: $font-size-small;
+        }
+    }
+}

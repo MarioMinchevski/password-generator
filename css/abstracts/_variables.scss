@@ -1,0 +1,56 @@
+@use 'sass:math';
+
+@function rem-calc($size) {
+    @return (math.div($size, 16)) * 1rem;
+}
+
+// Font settings
+
+$font-family-base: "JetBrains Mono", monospace;
+
+
+// font weight 
+
+$font-weight-regular: 400;
+
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+
+// font size
+
+$font-size-base: rem-calc(18);
+$font-size-small: rem-calc(16);
+
+// headings size
+
+$font-size-heading-large: rem-calc(32);
+$font-size-heading-medium: rem-calc(24);
+
+// Color settings
+
+$color-neutral-primary: #24232C;
+$color-neutral-secondary: #817D92;
+$color-neutral-tertiary: #E6E5EA;
+$color-neutral-quaternary: #18171F;
+
+
+$color-primary: #A4FFAF;
+$color-secondary: #F64A4A;
+$color-tertiary: #FB7C58;
+$color-quaternary: #F8CD65;
+
+// Box shadows 
+
+$box-shadow-primary: 0px 16px 40px rgba(143, 160, 193, 0.14);
+$box-shadow-secondary: 0px 16px 40px rgba(49, 62, 81, 0.14);
+
+// Border radius
+
+$border-radius-primary: 24px;
+$border-radius-secondary: 12px;
+$border-radius-tertiary: 8px;
+
+// Size settings
+
+$gutter-base: rem-calc(30);
