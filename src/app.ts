@@ -4,7 +4,7 @@ import { PasswordStrength } from "./utils/enums.js"
 import { rangeInput, generatedPassword, generatedPasswordStatusText, passwordLenghthText, indicatorsArray, copyIcon, generatePassBtn, hasUpperCheckbox, hasLowerCheckbox, hasNumberCheckbox, hasSymbolCheckbox, errorMessage, passwordGeneratorStrengthLevel } from "./utils/vars.js"
 
 let passwordStrenghtStatus: string
-// initialAnimation()
+initialAnimation()
 
 // range input fill func
 
