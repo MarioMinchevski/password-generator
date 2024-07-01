@@ -218,6 +218,7 @@ body {
   .password-generator {
     min-width: unset;
     width: 343px;
+    margin-bottom: 2rem;
   }
 }
 .password-generator .password-generator__box,
