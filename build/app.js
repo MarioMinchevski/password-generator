@@ -7,11 +7,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { initialAnimation, typewriterEffect } from "./utils/animations.js";
+import { typewriterEffect } from "./utils/animations.js";
 import { PasswordStrength } from "./utils/enums.js";
 import { rangeInput, generatedPassword, generatedPasswordStatusText, passwordLenghthText, indicatorsArray, copyIcon, generatePassBtn, hasUpperCheckbox, hasLowerCheckbox, hasNumberCheckbox, hasSymbolCheckbox, errorMessage, passwordGeneratorStrengthLevel } from "./utils/vars.js";
 let passwordStrenghtStatus;
-initialAnimation();
+// initialAnimation()
 // range input fill func
 const updateBackground = () => {
     const value = rangeInput.value;
