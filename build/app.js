@@ -144,6 +144,14 @@ generatePassBtn.addEventListener('click', () => {
         !hasSymbol;
     if (invalidInput) {
         errorMessage.classList.remove('hidden');
+        errorMessage.textContent = 'Please select at least one option to generate a password.';
+        errorMessage.style.bottom = '-4rem';
+        return;
+    }
+    else if (rangeInput.valueAsNumber === 0) {
+        errorMessage.classList.remove('hidden');
+        errorMessage.textContent = 'Password must be at least one charachter.';
+        errorMessage.style.bottom = '-2.5rem';
         return;
     }
     const newGeneratedPassword = generateRandomString({

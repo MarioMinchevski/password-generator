@@ -514,6 +514,7 @@ body {
 .password-generator .error-message {
   position: absolute;
   left: 0;
+  right: 0;
   bottom: -4rem;
   text-align: center;
   color: #F64A4A;
