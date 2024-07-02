@@ -230,12 +230,18 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1.125rem 2rem;
+  gap: 1rem;
 }
 @media (max-width: 600px) {
   .password-generator .password-generator__box {
     min-width: unset;
     padding: 1rem;
   }
+}
+.password-generator .password-generator__box .password-generator__generated-password-wrapper {
+  flex-grow: 1;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 .password-generator .password-generator__box .password-generator__generated-password {
   font-size: 2rem;
@@ -255,6 +261,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  flex-shrink: 0;
 }
 .password-generator .password-generator__box .password-generator__status .password-generator__status-icon {
   cursor: pointer;
